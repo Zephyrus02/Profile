@@ -82,9 +82,9 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Im a Sophomore at Vellore Institute of Technology Chennai. I am an AI ML enthusiast and a Tech Geek.
+          <p>Undergrad at Vellore Institute of Technology Chennai. I am an AI ML enthusiast and a Tech Geek.
             Coding has always been my forte and i love to take up challenges.
-            I am a member of Dreadnought Robotics, CloudOps and HackClub at VIT-C. I also am a competitive gamer and a
+            I am a member of Dreadnought Robotics and HackClub at VIT-C. I also am a competitive gamer and a
             guitarist.
           </p>
         </div>
@@ -121,7 +121,7 @@
             </div>
             <p>
               I am a Full-Stack Web Developer and i have worked on project for clubs and events. I am familier with
-              frameworks and libraries such as Node, React, Flask and I have worked with all of these.
+              frameworks and libraries such as Node.js, React.js, Flask and I have worked with all of these.
             </p>
           </div>
         </div>
@@ -136,8 +136,9 @@
         <div class="section-title">
           <h2>Facts</h2>
           <p>
-            I love to code and design websites. I have put up my projects on my github and am open to collaborate on any
-            project. I am looking for opportunities to learn new stuff and implement it. Here are a few facts about me.
+            I love to code and design websites. I have put up my projects on my github and I am open to collaborate on
+            any project. I am looking for opportunities to learn new stuff and implement it. Here are a few facts about
+            me.
           </p>
         </div>
 
@@ -400,13 +401,14 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Keepr"><i class="bx bx-plus"></i></a>
-                <a href="https://keepr-by-aneesh.vercel.app/" title="More Details"><i class="bx bx-link"></i></a>
+                  class="portfolio-lightbox" title="Improved Disaster Response with Real-Time Location Monitoring"><i
+                    class="bx bx-plus"></i></a>
+                <a href="" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -416,7 +418,8 @@
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Profile Website"><i class="bx bx-plus"></i></a>
+                  class="portfolio-lightbox" title="Profile Website Style 1
+                  "><i class="bx bx-plus"></i></a>
                 <a href="https://zephyrus02.github.io/My-Site/" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -459,14 +462,13 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Improved Disaster Response with Real-Time Location Monitoring"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  class="portfolio-lightbox" title="Keepr"><i class="bx bx-plus"></i></a>
+                <a href="https://keepr-by-aneesh.vercel.app/" title="Keepr web-app"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -512,23 +514,27 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="mailto:aneeshraskar@gmail.com" method="post" role="form" class="php-email-form">
+            <form onsubmit="sendEmail()" class="email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                  <label for="name">Your Name:</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <label for="name">Your Phone Number:</label>
+                  <input type="tel" class="form-control" name="ephno" id="phno" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="name">Your Email:</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject:</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
+                <label for="name">Message:</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
@@ -556,6 +562,29 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      console.log(document.getElementById("name").value);
+      Email.send({
+        SecureToken: "47da0b9c-13c9-44f5-b668-0c5f4aa97e55",
+        // Host: "smtp.elasticemail.com",
+        // Username: "aneeshraskar@gmail.com",
+        // Password: "5FEB79AACE5D611DBF21363E118C77412ADD",
+        To: 'aneesh.raskar02@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: document.getElementById("subject").value,
+        Body: "Name: " + document.getElementById("name").value
+          + "<br> Email: " + document.getElementById("email").value
+          + "<br> Phone no.:" + document.getElementById("phno").value
+          + "<br> Message: " + document.getElementById("message").value,
+      }).then(
+        message => alert("Mail sent successfully")
+      );
+    }
+  </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -565,7 +594,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
